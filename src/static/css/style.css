@@ -1,0 +1,261 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+* {
+  box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font: 14px Arial; }
+
+@keyframes floating {
+  from {
+    top: 0px; }
+  50% {
+    top: 15px; }
+  to {
+    top: 0px; } }
+
+body {
+  background: #f9c300; }
+
+#root {
+  height: 100%; }
+
+.container-fluid {
+  height: 100%; }
+  .container-fluid .app-row {
+    height: 100%;
+    overflow: hidden; }
+    .container-fluid .app-row .left, .container-fluid .app-row .center, .container-fluid .app-row .right {
+      height: inherit; }
+
+.App {
+  height: 100%; }
+  .App .search_bar .wrap_icon {
+    height: 100px;
+    text-align: left; }
+    .App .search_bar .wrap_icon i {
+      line-height: 100px;
+      font-size: 40px;
+      color: #444;
+      cursor: pointer; }
+      .App .search_bar .wrap_icon i:hover {
+        color: #333; }
+  .App .search_bar .city_button {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin: 5px 0 5px 0;
+    color: #2b2d2b;
+    font-size: 15px;
+    cursor: pointer; }
+    .App .search_bar .city_button:hover {
+      color: #fff; }
+  .App .weather {
+    margin: 200px auto 0;
+    width: 400px;
+    height: 400px;
+    color: #fff;
+    text-align: center; }
+    .App .weather__item {
+      width: 200px;
+      height: 100px;
+      margin: 0 auto;
+      position: relative; }
+      .App .weather__item-icon {
+        position: relative;
+        left: 0px;
+        top: 0px;
+        width: 100px;
+        animation: floating 2s infinite linear; }
+    .App .weather__cityName {
+      margin-top: 40px;
+      font-size: 25px; }
+    .App .weather__temp {
+      margin-top: 10px;
+      font-size: 50px; }
+    .App .weather__otherInfo_left .App .weather__otherInfo-wind {
+      margin-top: 10px;
+      font-size: 18px;
+      text-align: left;
+      margin-left: 30px; }
+  .App .bar {
+    transition: all 1s;
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    margin-bottom: -100px; }
+  .App .setting_bar .wrap_icon {
+    height: 100px;
+    text-align: right; }
+    .App .setting_bar .wrap_icon i {
+      line-height: 100px;
+      font-size: 40px;
+      color: #444;
+      cursor: pointer; }
+      .App .setting_bar .wrap_icon i:hover {
+        color: #333; }
+  .App .setting_bar .add_form {
+    width: 320px;
+    margin: 10px auto; }
+    .App .setting_bar .add_form .input_city {
+      width: 220px;
+      border: none;
+      height: 25px;
+      outline: none;
+      background: #f9c300;
+      border-bottom: 1px solid #333; }
+    .App .setting_bar .add_form .add_city {
+      width: 100px;
+      border: none;
+      height: 25px;
+      background: #444;
+      color: #fff; }
+  .App .setting_bar .remove_form {
+    width: 350px;
+    margin: 10px auto; }
+    .App .setting_bar .remove_form .item {
+      margin-top: 10px; }
+      .App .setting_bar .remove_form .item .chbox {
+        width: 15px;
+        height: 15px;
+        color: red; }
+    .App .setting_bar .remove_form .del_button {
+      margin-top: 10px;
+      border: none;
+      background-color: #444;
+      color: #fff;
+      width: 100px;
+      height: 25px; }
