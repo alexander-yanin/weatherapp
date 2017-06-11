@@ -1,0 +1,7 @@
+git clone 
+
+cd weather-app
+
+npm up
+
+npm start
