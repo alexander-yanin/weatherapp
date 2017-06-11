@@ -1,0 +1,7 @@
+git clone https://github.com/alexander-yanin/weatherapp.git
+
+cd weatherapp
+
+npm up
+
+npm start
