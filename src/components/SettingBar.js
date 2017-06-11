@@ -6,11 +6,20 @@ import SettingForm from './SettingForm';
 
 
 class SettingBar extends Component {
+/**
+* Метод handleClickIcon вызывает функцию onHandleClickIcon которая меняет
+* состояние SettingBar на противоположное (true/false) и очищает поле ввода.
+*/
   handleClickIcon = () => {
     this.props.onHandleClickIcon(!this.props.store.setting_bar);
     document.querySelector('.error').innerText = '';
   }
-
+/**
+* Метод addCity добавляет город localStorage.
+* Берет значение из поля ввода, после запроса проверяет
+* статус запроса, если 200, то проверяет на наличие существующего города в
+* списке городов.
+*/
   addCity = () => {
     const city_name = document.querySelector('.input_city');
     const url = `http://api.openweathermap.org`;
@@ -37,6 +46,12 @@ class SettingBar extends Component {
     document.querySelector('.error').innerText = '';
   }
 
+  /**
+  * Метод removeCity удаляет город из списка городов.
+  * Берет все чекбоксы, после чекбоксы фильтруются и остаются только активные
+  * Потом сверяется с уже существующим списком и удаляет путем фильтрации
+  * отмечанные города
+  */
   removeCity = () => {
     const all_cities = [].slice.call(document.getElementsByName('city'));
     const checked_cities = all_cities.filter((city) => city.checked).map((city) => city.value);

@@ -5,10 +5,18 @@ import Bar from './Bar';
 
 
 class SearchBar extends Component {
+/**
+* Метод handleClickIcon вызывает функцию onHandleClickIcon которая меняет
+* состояние SearchBar на противоположное (true/false).
+*/
   handleClickIcon = () => {
     this.props.onHandleClickIcon(!this.props.store.search_bar);
   }
-
+/**
+* Метод handleSelectCity на вход принимает название города
+* через API делает запрос и вызывает функцию onhandleSelectCity
+* которая обновляет состояние приложения
+*/
   handleSelectCity = (city) => {
     const url = `http://api.openweathermap.org`;
     const path = `/data/2.5/weather`;
