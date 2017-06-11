@@ -1,6 +1,6 @@
-git clone 
+git clone https://github.com/alexander-yanin/weatherapp.git
 
-cd weather-app
+cd weatherapp
 
 npm up
 
