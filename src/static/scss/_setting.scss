@@ -11,3 +11,15 @@ body {
     margin: 0;
     font: 14px Arial;
 }
+
+.clearfix {
+    zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}

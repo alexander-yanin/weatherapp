@@ -138,6 +138,17 @@ body {
   margin: 0;
   font: 14px Arial; }
 
+.clearfix {
+  zoom: 1; }
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
 @keyframes floating {
   from {
     top: 0px; }
@@ -206,11 +217,16 @@ body {
     .App .weather__temp {
       margin-top: 10px;
       font-size: 50px; }
-    .App .weather__otherInfo_left .App .weather__otherInfo-wind {
-      margin-top: 10px;
-      font-size: 18px;
-      text-align: left;
-      margin-left: 30px; }
+    .App .weather__otherInfo {
+      margin-top: 10px; }
+      .App .weather__otherInfo p {
+        margin-top: 15px; }
+      .App .weather__otherInfoLeft {
+        width: 200px;
+        float: left; }
+      .App .weather__otherInfoRight {
+        width: 200px;
+        float: right; }
   .App .bar {
     transition: all 1s;
     height: 80%;

@@ -94,13 +94,24 @@ body {
       font-size: 50px;
     }
     &__otherInfo{
-      &_left
-      &-wind {
-        margin-top: 10px;
-        font-size: 18px;
-        text-align: left;
-        margin-left: 30px;
+      margin-top: 10px;
+      p {
+        margin-top: 15px;
       }
+      &Left {
+        width: 200px;
+        float: left;
+      }
+      &Right {
+        width: 200px;
+        float: right;
+      }
+      // &-wind {
+      //   margin-top: 10px;
+      //   font-size: 18px;
+      //   text-align: left;
+      //   margin-left: 30px;
+      // }
     }
   }
   .bar {
