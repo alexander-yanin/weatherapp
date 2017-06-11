@@ -35,16 +35,11 @@ class App extends Component {
   render() {
     if (localStorage.getItem('cities') === null) {
       localStorage.setItem('cities', JSON.stringify(default_data));
-      //localStorage.setItem('cities', JSON.stringify([...JSON.parse(localStorage.getItem('cities')), {name: 'Новосиб'}]));
     }
     if (localStorage.getItem('weather') === null) {
       localStorage.setItem('weather', JSON.stringify([]));
     }
 
-    //localStorage.setItem('cities', JSON.stringify([...JSON.parse(localStorage.getItem('cities')), ...CITIES]));
-    //localStorage.setItem('cities', JSON.stringify([...JSON.parse(localStorage.getItem('cities')), {name: 'Новосиб'}]));
-    //localStorage.clear();
-    //console.log(localStorage.getItem('cities'));
     const cities = JSON.parse(localStorage.getItem('cities'));
     return (
       <div className="container-fluid">
